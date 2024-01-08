@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>youtube thumbnail</title>
+    <link rel="stylesheet" href="./src/css/main.css" />
+  </head>
+  <body class="sm:bg-slate-900 bg-slate-600">
+    <main class="max-w-2xl mx-auto mt-8 p-4 bg-slate-600 rounded">
+      <form
+        method="post"
+        name="ytUrlForm"
+        class="sm:flex items-center sm:space-y-0 space-y-4 gap-3"
+      >
+        <input
+          class="rounded px-4 py-2 w-full text-sm"
+          type="text"
+          name="ytUrl"
+          placeholder="paste youtube video link"
+          required
+        />
+        <button
+          class="bg-blue-500 text-sm text-white font-semibold px-4 py-2 sm:w-[30%] w-full rounded"
+        >
+          Grab Thumbnail
+        </button>
+      </form>
+
+      <!-- result div -->
+      <div class="mt-6 space-y-4 hidden" id="result-div">
+        <div class="w-full">
+          <img
+            id="img"
+            class="h-[400px] w-full"
+            src="https://img.youtube.com/vi/5sKyxUYRTQo/sddefault.jpg"
+            alt="img"
+          />
+        </div>
+        <button
+          class="px-4 py-2 text-center text-sm w-full text-white bg-blue-600 rounded font-semibold"
+          id="download"
+        >
+          <a target="_blank" href="" download="img.jpg">Download now!...</a>
+        </button>
+        <small class="text-white text-xs"
+          >NOTE: Click the button above, then right-click the image in the
+          browser tab and choose 'Save As' to save it as an image.</small
+        >
+      </div>
+    </main>
+    <script type="module" src="./src/js/app.js"></script>
+  </body>
+</html>
